@@ -5,7 +5,6 @@ puts annoyed.upcase
 puts selfish.upcase
 puts boss.upcase
 request = gets.chomp
-puts request.capitalize
 puts 'EXCUSE ME? WHAT DO YOU MEAN ' + '"' + request.upcase + '"?!?!'
 puts 'AND YOU HAVE THE AUDACITY TO SAY THIS IN MY PRESENCE?!'
 puts 'YOU\'RE FIRED!!!'
