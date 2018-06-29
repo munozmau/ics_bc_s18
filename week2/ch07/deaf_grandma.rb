@@ -1,17 +1,20 @@
-puts 'HELLO SONNY!'
-greeting = gets.chomp
-while greeting
-  if (greeting != greeting.upcase and greeting != 'BYE')
-  puts 'HUH?! SPEAK UP SONNY!'
-  greeting = gets.chomp
+puts 'HELLO, SONNY!'
+bye = 0
+loop do
+  case gets.chomp
+  when "BYE"
+    bye += 1
+    puts 'BYE, SONNY!'
+    break if bye == 1
+    next
+  when /[a-z]/
+    puts "HUH?! SPEAK UP, SONNY!"
+  when /[A-Z]/
+    puts "NO, NOT SINCE #{rand(21)+1930}!"
   else
-    if (greeting == greeting.upcase and greeting != 'BYE')
-      year = 1930 + rand(20)
-      puts 'NO NOT SINCE ' + year.to_s + '!'
-      greeting = gets.chomp
-      break if greeting == 'BYE'
-    end
+    puts "HMMM? DID YOU SAY SOMETHING?"
   end
+  bye = 0
 end
 
-puts 'BYE SONNY!'
+puts 'VISIT ME AGAIN SOON!'
